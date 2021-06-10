@@ -12,3 +12,13 @@ import 'bootstrap'
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+import { addMovie } from "../components/add_movie"
+import { initSelect2 } from '../components/init_select2';
+
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your JS functions here
+  initSelect2();
+  addMovie();
+});
